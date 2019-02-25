@@ -5,8 +5,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.qi.flappy.State.GameStateManager;
-import com.qi.flappy.State.MenuState;
+import com.qi.flappy.states.GameStateManager;
+import com.qi.flappy.states.MenuState;
 
 public class MyFlappy extends ApplicationAdapter {
 	public static final int WIDTH = 480;

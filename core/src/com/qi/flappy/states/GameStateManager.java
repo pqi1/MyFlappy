@@ -1,4 +1,4 @@
-package com.qi.flappy.State;
+package com.qi.flappy.states;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 

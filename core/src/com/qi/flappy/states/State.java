@@ -1,4 +1,4 @@
-package com.qi.flappy.State;
+package com.qi.flappy.states;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -9,7 +9,7 @@ public abstract class State {
     protected Vector3 mouse;
     protected GameStateManager gsm;
 
-    protected State(GameStateManager gsm){
+    public State(GameStateManager gsm){
         this.gsm = gsm;
         cam = new OrthographicCamera();
         mouse = new Vector3();
@@ -18,4 +18,5 @@ public abstract class State {
     protected abstract void handleInput();
     public abstract void update(float dt);
     public abstract void render(SpriteBatch sb);
+    public abstract void dispose();
 }
