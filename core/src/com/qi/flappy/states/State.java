@@ -3,6 +3,7 @@ package com.qi.flappy.states;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.scenes.scene2d.Stage;
 
 public abstract class State {
     protected OrthographicCamera cam;

@@ -19,6 +19,7 @@ public class PlayState extends State {
     private Texture ground;
     private Vector2 groundPos1, groundPos2;
     private Array<Tube> tubes;
+    private int score;
 
     public PlayState(GameStateManager gsm) {
         super(gsm);
@@ -36,6 +37,7 @@ public class PlayState extends State {
             tubes.add(new Tube(i * (TUBE_SPACING + Tube.TUBE_WIDTH)));
         }
 
+        score = 0;
     }
 
     @Override
@@ -60,6 +62,11 @@ public class PlayState extends State {
                 tube.reposition(tube.getPosTopTube().x + ((Tube.TUBE_WIDTH + TUBE_SPACING) * TUBE_COUNT));
             }
 
+            if(tube.getScore(bird.getBounds())){
+//                score++;
+//                System.out.println(score);
+            }
+
             if(tube.collides(bird.getBounds())){
                 gsm.set(new PlayState(gsm));
             }
@@ -82,6 +89,7 @@ public class PlayState extends State {
         for(Tube tube : tubes){
             sb.draw(tube.getTopTube(), tube.getPosTopTube().x, tube.getPosTopTube().y);
             sb.draw(tube.getBotTube(), tube.getPosBotTube().x, tube.getPosBotTube().y);
+            //sb.draw(tube.scoreTexture, tube.posScore.x, tube.posScore.y);
         }
         sb.draw(ground,groundPos1.x,groundPos1.y);
         sb.draw(ground,groundPos2.x,groundPos2.y);

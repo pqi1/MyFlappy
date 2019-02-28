@@ -14,6 +14,10 @@ public class Tube {
     private Texture topTube, botTube;
     private Vector2 posTopTube, posBotTube;
     private Rectangle boundsTop, boundsBot;
+    private Rectangle scoreBox;
+    public Texture scoreTexture;
+    public Vector2 posScore;
+    private static int cishu = 0;
 
     private Random rand;
 
@@ -27,6 +31,10 @@ public class Tube {
 
         boundsTop = new Rectangle(posTopTube.x, posTopTube.y, topTube.getWidth(), topTube.getHeight());
         boundsBot = new Rectangle(posBotTube.x, posBotTube.y, botTube.getWidth(), botTube.getHeight());
+
+        //scoreTexture = new Texture("playbtn.png");
+        posScore = new Vector2(x, posTopTube.y - TUBE_GAP);
+        scoreBox = new Rectangle(posScore.x, posScore.y, topTube.getWidth(),TUBE_GAP);
     }
 
     public Texture getTopTube() {
@@ -51,11 +59,24 @@ public class Tube {
 
         boundsTop.setPosition(posTopTube.x,posTopTube.y);
         boundsBot.setPosition(posBotTube.x,posBotTube.y);
+
+        posScore.set(x, posTopTube.y - TUBE_GAP);
+        scoreBox.setPosition(posScore.x, posScore.y);
     }
 
     public boolean collides(Rectangle player){
         return player.overlaps(boundsTop) || player.overlaps(boundsBot);
+    }
 
+    public boolean getScore(Rectangle player){
+        cishu++;
+        System.out.println(cishu);
+        if(player.x > scoreBox.x && player.x < (scoreBox.x + scoreBox.getWidth()) && player.y > scoreBox.y && player.y < (scoreBox.y + TUBE_GAP) ){
+            return true;
+        }
+
+        return false;
+        //return player.overlaps(scoreBox);
     }
 
     public void dispose(){

@@ -7,6 +7,8 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector3;
 
+import java.awt.TextField;
+
 public class Bird {
     private static final int GRAVITY = -5;
     private static final int MOVEMENT = 100;
