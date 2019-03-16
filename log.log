@@ -1,0 +1,170 @@
+commit 89488554836de2965d269729a32d1b30e05915e9
+Author: pqi1 <42855859+pqi1@users.noreply.github.com>
+Date:   Wed Feb 27 21:39:58 2019 -0500
+
+    Update README.md
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 2821ab8c74c4855976402addc133245d55422fc0
+Author: pqi1 <42855859+pqi1@users.noreply.github.com>
+Date:   Wed Feb 27 21:38:41 2019 -0500
+
+    Create README.md
+
+ README.md | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 74d1af7539642262e40b843752b4bebeb03cf7aa
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Wed Feb 27 21:33:24 2019 -0500
+
+    game done
+
+ core/src/com/qi/flappy/MyFlappy.java                |  6 ++++--
+ core/src/com/qi/flappy/sprites/Bird.java            |  2 ++
+ core/src/com/qi/flappy/sprites/ScoreBoard.java      |  7 +++++++
+ core/src/com/qi/flappy/sprites/Tube.java            | 21 +++++++++++++++++++++
+ core/src/com/qi/flappy/states/GameStateManager.java |  1 +
+ core/src/com/qi/flappy/states/MenuState.java        |  1 +
+ core/src/com/qi/flappy/states/PlayState.java        |  8 ++++++++
+ core/src/com/qi/flappy/states/State.java            |  1 +
+ 8 files changed, 45 insertions(+), 2 deletions(-)
+
+commit 36438b41dd1800df9ccf84adad7e41c283505dd8
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Wed Feb 27 10:05:00 2019 -0500
+
+    music and all animation done
+
+ android/AndroidManifest.xml                  |   2 +-
+ android/assets/music.mp3                     | Bin 0 -> 2832580 bytes
+ android/assets/sfx_wing.ogg                  | Bin 0 -> 7728 bytes
+ core/src/com/qi/flappy/MyFlappy.java         |  14 +++++++++++++-
+ core/src/com/qi/flappy/sprites/Bird.java     |   7 +++++++
+ core/src/com/qi/flappy/states/MenuState.java |   7 +++++--
+ 6 files changed, 26 insertions(+), 4 deletions(-)
+
+commit 4ba899f7ace1a8f9397f1450b9c8978ba6cc293d
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Wed Feb 27 09:44:52 2019 -0500
+
+    bird can fly. almost done
+
+ core/src/com/qi/flappy/sprites/Animation.java      | 42 +++++++++++++
+ core/src/com/qi/flappy/sprites/Bird.java           | 33 +++++++++--
+ core/src/com/qi/flappy/sprites/Tube.java           | 26 +++++++++
+ .../src/com/qi/flappy/states/GameStateManager.java |  4 +-
+ core/src/com/qi/flappy/states/MenuState.java       |  1 -
+ core/src/com/qi/flappy/states/PlayState.java       | 68 ++++++++++++++++++++--
+ 6 files changed, 161 insertions(+), 13 deletions(-)
+
+commit 11163c555c92166479cbbfc110f2c6afd92dae65
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Mon Feb 25 00:46:37 2019 -0500
+
+    last commit tonight
+
+ core/src/com/qi/flappy/sprites/Tube.java     | 40 ++++++++++++++++++++++++++++
+ core/src/com/qi/flappy/states/PlayState.java |  5 ++++
+ 2 files changed, 45 insertions(+)
+
+commit d484faf3b34ed8e3cece89553de795439495467c
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sun Feb 24 22:32:25 2019 -0500
+
+    bird up and flying
+
+ android/assets/bird.png                            | Bin 0 -> 3038 bytes
+ android/assets/birdanimation.png                   | Bin 0 -> 3193 bytes
+ android/assets/bottomtube.png                      | Bin 0 -> 5036 bytes
+ android/assets/gameover.png                        | Bin 0 -> 3727 bytes
+ android/assets/ground.png                          | Bin 0 -> 3153 bytes
+ android/assets/toptube.png                         | Bin 0 -> 5103 bytes
+ core/src/com/qi/flappy/MyFlappy.java               |   4 +-
+ core/src/com/qi/flappy/sprites/Bird.java           |  45 ++++++++++++++++++++
+ .../flappy/{State => states}/GameStateManager.java |   2 +-
+ .../com/qi/flappy/{State => states}/MenuState.java |  15 +++++--
+ core/src/com/qi/flappy/states/PlayState.java       |  46 +++++++++++++++++++++
+ .../src/com/qi/flappy/{State => states}/State.java |   5 ++-
+ 12 files changed, 109 insertions(+), 8 deletions(-)
+
+commit c79af66519f66ed900ea056a5f34fea4274447d5
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sun Feb 24 17:07:33 2019 -0500
+
+    menu state done
+
+ android/assets/bg.png                              | Bin 0 -> 8600 bytes
+ android/assets/playbtn.png                         | Bin 0 -> 3183 bytes
+ android/src/com/qi/flappy/AndroidLauncher.java     |   3 +-
+ core/src/com/qi/flappy/MyFlappy.java               |  40 +++++++++++++++++++++
+ core/src/com/qi/flappy/MyGdxGame.java              |  33 -----------------
+ core/src/com/qi/flappy/State/GameStateManager.java |  35 ++++++++++++++++++
+ core/src/com/qi/flappy/State/MenuState.java        |  35 ++++++++++++++++++
+ core/src/com/qi/flappy/State/State.java            |  21 +++++++++++
+ .../src/com/qi/flappy/desktop/DesktopLauncher.java |   9 +++--
+ 9 files changed, 139 insertions(+), 37 deletions(-)
+
+commit c9d4a1ca190d3356b46e718daee1c7e4e9997ebc
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sun Feb 24 16:21:31 2019 -0500
+
+    first commit
+
+ .gitignore                                         | 125 +++++++++++++++
+ android/AndroidManifest.xml                        |  24 +++
+ android/assets/badlogic.jpg                        | Bin 0 -> 68465 bytes
+ android/build.gradle                               | 144 +++++++++++++++++
+ android/ic_launcher-web.png                        | Bin 0 -> 22195 bytes
+ android/proguard-rules.pro                         |  45 ++++++
+ android/project.properties                         |   9 ++
+ android/res/drawable-anydpi-v26/ic_launcher.xml    |   6 +
+ .../drawable-anydpi-v26/ic_launcher_foreground.xml |  40 +++++
+ android/res/drawable-hdpi/ic_launcher.png          | Bin 0 -> 16820 bytes
+ android/res/drawable-mdpi/ic_launcher.png          | Bin 0 -> 16124 bytes
+ android/res/drawable-xhdpi/ic_launcher.png         | Bin 0 -> 17915 bytes
+ android/res/drawable-xxhdpi/ic_launcher.png        | Bin 0 -> 18746 bytes
+ android/res/drawable-xxxhdpi/ic_launcher.png       | Bin 0 -> 19448 bytes
+ android/res/values/color.xml                       |   4 +
+ android/res/values/strings.xml                     |   6 +
+ android/res/values/styles.xml                      |  12 ++
+ android/src/com/qi/flappy/AndroidLauncher.java     |  16 ++
+ app/.gitignore                                     |   1 +
+ app/build.gradle                                   |  28 ++++
+ app/proguard-rules.pro                             |  21 +++
+ .../example/myflappy/ExampleInstrumentedTest.java  |  26 ++++
+ app/src/main/AndroidManifest.xml                   |  21 +++
+ .../java/com/example/myflappy/MainActivity.java    |  13 ++
+ .../res/drawable-v24/ic_launcher_foreground.xml    |  34 ++++
+ .../main/res/drawable/ic_launcher_background.xml   | 170 ++++++++++++++++++++
+ app/src/main/res/layout/activity_main.xml          |  18 +++
+ app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml |   5 +
+ .../res/mipmap-anydpi-v26/ic_launcher_round.xml    |   5 +
+ app/src/main/res/mipmap-hdpi/ic_launcher.png       | Bin 0 -> 2963 bytes
+ app/src/main/res/mipmap-hdpi/ic_launcher_round.png | Bin 0 -> 4905 bytes
+ app/src/main/res/mipmap-mdpi/ic_launcher.png       | Bin 0 -> 2060 bytes
+ app/src/main/res/mipmap-mdpi/ic_launcher_round.png | Bin 0 -> 2783 bytes
+ app/src/main/res/mipmap-xhdpi/ic_launcher.png      | Bin 0 -> 4490 bytes
+ .../main/res/mipmap-xhdpi/ic_launcher_round.png    | Bin 0 -> 6895 bytes
+ app/src/main/res/mipmap-xxhdpi/ic_launcher.png     | Bin 0 -> 6387 bytes
+ .../main/res/mipmap-xxhdpi/ic_launcher_round.png   | Bin 0 -> 10413 bytes
+ app/src/main/res/mipmap-xxxhdpi/ic_launcher.png    | Bin 0 -> 9128 bytes
+ .../main/res/mipmap-xxxhdpi/ic_launcher_round.png  | Bin 0 -> 15132 bytes
+ app/src/main/res/values/colors.xml                 |   6 +
+ app/src/main/res/values/strings.xml                |   3 +
+ app/src/main/res/values/styles.xml                 |  11 ++
+ .../java/com/example/myflappy/ExampleUnitTest.java |  17 ++
+ build.gradle                                       |  91 +++++++++++
+ core/build.gradle                                  |  11 ++
+ core/src/com/qi/flappy/MyGdxGame.java              |  33 ++++
+ desktop/build.gradle                               |  55 +++++++
+ .../src/com/qi/flappy/desktop/DesktopLauncher.java |  12 ++
+ gradle.properties                                  |   3 +
+ gradle/wrapper/gradle-wrapper.jar                  | Bin 0 -> 54208 bytes
+ gradle/wrapper/gradle-wrapper.properties           |   6 +
+ gradlew                                            | 172 +++++++++++++++++++++
+ gradlew.bat                                        |  84 ++++++++++
+ settings.gradle                                    |   1 +
+ 54 files changed, 1278 insertions(+)
