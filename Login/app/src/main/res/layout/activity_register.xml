@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:background="#123456"
+    android:background="@drawable/back"
     android:gravity="center_horizontal">
 
     <EditText
@@ -14,6 +14,8 @@
         android:layout_width="190dp"
         android:layout_height="40dp"
         android:layout_marginTop="160dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/username"
         android:hint="@string/username"/>
 
     <EditText
@@ -21,6 +23,8 @@
         android:layout_width="190dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/password"
         android:hint="@string/password"/>
 
     <EditText
@@ -28,6 +32,8 @@
         android:layout_width="190dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/password"
         android:hint="@string/conform_password"/>
 
     <Button
