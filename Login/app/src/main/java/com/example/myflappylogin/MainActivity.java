@@ -7,12 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText myTextUsername;
     EditText myTextPassword;
     Button myLoginButton;
     TextView myTextViewRegister;
+    DatabaseHelper db;
 
 
     @Override
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        db = new DatabaseHelper(this);
         myTextUsername = (EditText)findViewById(R.id.username);
         myTextPassword = (EditText)findViewById(R.id.passowrd);
         myLoginButton = (Button) findViewById(R.id.loginButton);
@@ -33,7 +36,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        myLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String user = myTextUsername.getText().toString().trim();
+                String pwd = myTextPassword.getText().toString().trim();
+                Boolean res = db.checkUser(user,pwd);
+                if(res == true){
+                    Toast.makeText(MainActivity.this, "Successfully Logged In", Toast.LENGTH_SHORT).show();
 
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "Login Error", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 }
