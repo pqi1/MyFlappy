@@ -8,32 +8,32 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
+
     EditText myTextUsername;
     EditText myTextPassword;
-    Button myLoginButton;
-    TextView myTextViewRegister;
-
+    EditText myTextCnfPassword;
+    Button myButtonRegister;
+    TextView myTextViewLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register);
 
         myTextUsername = (EditText)findViewById(R.id.username);
         myTextPassword = (EditText)findViewById(R.id.passowrd);
-        myLoginButton = (Button) findViewById(R.id.loginButton);
-        myTextViewRegister = (TextView) findViewById(R.id.textview_register);
+        myTextCnfPassword = (EditText)findViewById(R.id.cnf_passowrd);
+        myButtonRegister = (Button) findViewById(R.id.registerButton);
+        myTextViewLogin = (TextView) findViewById(R.id.textview_login);
 
-        myTextViewRegister.setOnClickListener(new View.OnClickListener() {
+        myTextViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registerIntent = new Intent(MainActivity.this, RegisterActivity.class);
+                Intent registerIntent = new Intent(RegisterActivity.this, MainActivity.class);
                 startActivity(registerIntent);
             }
         });
-
-
 
     }
 }
